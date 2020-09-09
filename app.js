@@ -124,7 +124,7 @@ const verificarCamposPost = (dados) => {
 
     for (let props in dados) {
         for (let propsDoAutor of propriedades) {
-            if (props === propsDoAutor && (props !== 'deletado' || props !== 'id')) {
+            if (props === propsDoAutor && props !== 'id') {
                 return true
             }
         }
@@ -152,7 +152,7 @@ const verificarCamposAutores = (dados) => {
 
     for (let props in dados) {
         for (let propsDoAutor of propriedades) {
-            if (props === propsDoAutor && (props !== 'deletado' && props !== 'id')) {
+            if (props === propsDoAutor && props !== 'id') {
                 return true
             }
         }
